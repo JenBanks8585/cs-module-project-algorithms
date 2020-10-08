@@ -1,7 +1,7 @@
 import random
 import time
 from itertools import combinations
-
+"""
 class Items:
     def __init__(self, name, weight, value):
         self.name = name
@@ -155,3 +155,46 @@ items = medium_cave
 start = time.time()
 knapsack = greedy_fill_knapsack(knapsack, items)
 print_results(items, knapsack)
+"""
+# fibonacci
+
+def fibonacci(n):
+    #base case
+    if (n == 0):
+        return n
+    if (n == 1):
+        return n
+    
+    return fibonacci(n-1) + fibonacci(n-2)
+
+start = time.time()
+print(f'{fibonacci(315)}')
+print(f'\nResult calculated in {time.time() - start:.5f} seconds')
+print(f'\n_______________________________')
+
+
+# with cache
+#cache = {}
+#def mem_fibonacci(n):
+#    if (n==0):
+#        cache[0]=0
+#        return 0
+#    if (n==1):
+#        cache[1]=1
+#        return 1
+#
+#    if n in cache:
+#        return cache[n]
+#
+#    res_n_1 = mem_fibonacci(n-1)
+#    res_n_2= mem_fibonacci(n-2)
+#    res_at_n = res_n_1 + res_n_2
+#
+#    cache[n] = res_at_n
+#
+#    return res_at_n
+#
+#start = time.time()
+#print(f'{mem_fibonacci(315)}')
+#print(f'\nResult calculated in {time.time() - start:.5f} seconds')
+#print(f'\n_______________________________')
